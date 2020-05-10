@@ -12,12 +12,12 @@
     <button type="button" id="fillData">Get Random User</button>
     <form id="myForm">
         <div>
-            First :
+            First Name :
             <input type="text" name="First" value="First Name" />
             <br />
         </div>
         <div>
-            Last :
+            Last Name :
             <input type="text" name="Last" value="Last Name" />
             <br />
         </div>
@@ -67,6 +67,9 @@
                     url: url,
                     method: "POST",
                     data: myData,
+                    success: function(data) {
+                        console.log(data);
+                    },
                 });
             });
             $("#loadData").click(function() {
